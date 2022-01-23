@@ -80,12 +80,15 @@ header {
 }
 
 header input {
-  border-color: #FAFAFA;
-  
+  border: 1px solid #DBDBDB;
+  border-radius: 3px;
 }
 
 header input::placeholder {
   color: #979797;
+  text-align: center;
+
+  font-size: 12px;
 }
 
 .verticalSeparator {
@@ -356,12 +359,13 @@ header input::placeholder {
     position: fixed;
   
     top: 97px;
-    /* (Half the lenght of screen) + (half the Feed size) + (constant value of the space between the Feed and the Sidebar) - (content size correction between feed and sidebar)  */
+    /* (Half the lenght of screen) + (half the Feed size) + (constant value of the space between the Feed and sidebar) - (content size correction between feed and sidebar -> (935px / 2) - 324px )  */
     left: calc(50vw + 338px - 143.5px);
 
     z-index: 1;
 
     max-width: 293px;
+    margin-right: 12px;
   }
 
 /* Sidebar top */
