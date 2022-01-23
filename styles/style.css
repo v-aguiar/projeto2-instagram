@@ -3,10 +3,18 @@
   font-weight: 400;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
   
   background-color: #E5E5E5;
+}
+
+a {
+  text-decoration: none;
 }
 
 strong {
@@ -49,6 +57,15 @@ header {
   background-color: #fff;
 
   z-index: 1;
+}
+
+header input {
+  border-color: #FAFAFA;
+  
+}
+
+header input::placeholder {
+  color: #979797;
 }
 
 .verticalSeparator {
@@ -106,10 +123,17 @@ header {
 }
 
 .stories .story {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-right: 14px;
+
+  font-size: 12px;
+  white-space: nowrap;
 }
 
-.stories .story .storyBg{
+.stories .story .storyBg {
 
   background-image: url("../assets/stories_background.jpg");
   background-size: contain;
@@ -121,8 +145,6 @@ header {
   width: 66px;
   height: 66px;
   line-height: 0;
-  
-  margin-right: 14px;
 
   border-radius: 50%;
 }
@@ -134,6 +156,8 @@ header {
 
 .stories .story p {
   font-size: 12px;
+
+  margin-top: 4px;
 }
 
 /************ Feed **************/
@@ -249,6 +273,7 @@ header {
 
 /************ Media Querires **************/
 
+/* Styles for screens bigger then 614px */
 @media (min-width: 614px) {
   .logos,
   .searchBox {
@@ -298,10 +323,50 @@ header {
   }
 }
 
+/* Styles for screens bigger then 935px */
 @media (min-width: 935px) {
   #sidebar {
-    display: block;
+    display: initial;
+    position: fixed;
+  
+    top: 97px;
+    /* (Half the lenght of screen) + (half the Feed size) + (constant value of the space between the Feed and the Sidebar)   */
+    left: calc(50vw + 338px);
+
+    z-index: 1;
 
     max-width: 293px;
   }
+
+  #sidebar .sidebarTop {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 24px;
+  }
+
+  #sidebar .sidebarTop img {
+    width: 56px;
+    margin-right: 17px;
+
+    border-radius: 50%;
+  }
+
+  #sidebar .sidebarSugestions > span,
+  #sidebar .sidebarSugestions .sidebarSugestion  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 17px;
+  }
+
+  #sidebar .sidebarSugestions .sidebarSugestion > div {
+    display: flex;
+    align-items: center;
+  }
+
+  #sidebar .sidebarSugestions .sidebarSugestion .sugestionDescription {
+    margin-left: 11px;
+  } 
 }
