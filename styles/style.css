@@ -82,13 +82,19 @@ header {
 header input {
   border: 1px solid #DBDBDB;
   border-radius: 3px;
+
+  outline: none;
+
+  font-size: 12px;
+
+  padding: 3px 5px;
 }
 
 header input::placeholder {
-  color: #979797;
-  text-align: center;
-
   font-size: 12px;
+  color: #979797;
+  
+  text-align: center;
 }
 
 .verticalSeparator {
@@ -120,7 +126,7 @@ header input::placeholder {
   z-index: 0;
 }
 
-#mainSection .stories {
+.stories {
   display: flex;
   align-items: center;
   
@@ -337,7 +343,7 @@ header input::placeholder {
 
     position: absolute;
 
-    right: 9px;
+    right: 17px;
     top: 46px;
   }
 
