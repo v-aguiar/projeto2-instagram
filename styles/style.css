@@ -345,13 +345,19 @@ header input::placeholder {
 
 /* Styles for screens bigger then 935px */
 @media (min-width: 935px) {
+  #mainSection {
+    margin: initial;
+    position: relative;
+    left: calc(50vw - 467.5px);
+  }
+
   #sidebar {
     display: initial;
     position: fixed;
   
     top: 97px;
-    /* (Half the lenght of screen) + (half the Feed size) + (constant value of the space between the Feed and the Sidebar)   */
-    left: calc(50vw + 338px);
+    /* (Half the lenght of screen) + (half the Feed size) + (constant value of the space between the Feed and the Sidebar) - (content size correction between feed and sidebar)  */
+    left: calc(50vw + 338px - 143.5px);
 
     z-index: 1;
 
