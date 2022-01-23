@@ -240,7 +240,7 @@ header input::placeholder {
   background-size: contain;
 }
 
-.post video {
+.post .postVideo {
   width: 100%;
 }
 
