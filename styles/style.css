@@ -12,7 +12,7 @@
 body {
   height: 100vh;
   
-  background-color: #E5E5E5;
+  background-color: #FAFAFA;
 }
 
 a {
@@ -87,6 +87,7 @@ header input {
 
   font-size: 12px;
 
+  width: 215px;
   padding: 3px 5px;
 }
 
@@ -147,7 +148,7 @@ header input::placeholder {
   color: #fff;
   font-size: 26px;
   
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow( 2px 2px 5px rgba(0, 0, 0, 0.2) );
   border-radius: 50%;
 }
 
@@ -202,6 +203,7 @@ header input::placeholder {
 
   width: 100%;
 
+  border: solid 1px #DBDBDB;
   margin-bottom: 60px;
 }
 
@@ -245,7 +247,7 @@ header input::placeholder {
 }
 
 .post .postBottom {
-  height: 76px;
+  height: 100%;
 
   padding: 13px 17px;
 }
@@ -266,12 +268,89 @@ header input::placeholder {
   font-size: 17px;
 }
 
-.post .postBottom span ion-icon {
+.post .postBottom .postIcons ion-icon {
   margin-right: 18px;
 }
 
 .post .postBottom span img {
   margin-right: 5px;
+}
+
+/* Bônus -> Comentários */
+.post .postBottom .postComments h4 {
+  font-size: 12px;
+}
+
+.post .postBottom .postComments small {
+  color: #8e8e8e;
+  font-size: 12px;
+
+  display: block;
+  margin: 2px 0;
+}
+
+.post .postBottom .postComments .postedTime {
+  font-size: 10px;
+}
+
+.post .postBottom .postComments small:last-child {
+  font-size: 10px;
+}
+
+.post .postBottom .commentLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  line-height: 19px;
+}
+
+.post .postBottom .commentLine:first-child {
+  margin-top: 12px;
+} 
+
+.post .postBottom .commentLine > span p {
+  margin-left: 5px;
+}
+
+.post .postBottom .commentInput {
+  display: flex;
+  align-items: center;
+
+  border-top: solid 1px #DBDBDB; 
+  margin-top: 12px;
+  padding-top: 12px; 
+}
+
+.post .postBottom .commentInput ion-icon {
+  font-size: 16px;
+}
+
+.post .postBottom .commentInput input {
+  font-size: 12px;
+
+  width: 100%;
+
+  padding: 3px 10px;
+
+  outline: none;
+  border: none;
+}
+
+.post .postBottom .commentInput input::placeholder {
+  font-size: 12px;
+  color: #979797;
+}
+
+.post .postBottom .commentInput h4 {
+  color: #B2DFFC;
+
+  transition-property: color;
+  transition: 300ms;
+}
+
+.post .postBottom .commentInput h4:hover{
+  color: #0095F6;
 }
 
 /************ Barra Inferior mobile **************/
